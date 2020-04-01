@@ -8,7 +8,7 @@ FROM firechip/pages-gem
 # This Dockerfile adds a non-root user with sudo access. Use the "remoteUser"
 # property in devcontainer.json to use it. On Linux, the container user's GID/UIDs
 # will be updated to match your local UID/GID (when using the dockerFile property).
-# See https://aka.ms/vscode-remote/containers/non-root-user for details.
+# See https://aka.ms/$USERNAME-remote/containers/non-root-user for details.
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
@@ -16,7 +16,8 @@ ARG USER_GID=$USER_UID
 # [Optional] Version of Node.js to install.
 ARG INSTALL_NODE="true"
 ARG NODE_VERSION="lts/*"
-ENV NVM_DIR=/home/vscode/.nvm
+ENV NVM_DIR=/home/$USERNAME/.nvm
+ENV WORK_SPACE_DIR=/workspace/jekyll-theme
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -28,13 +29,13 @@ RUN apt-get update \
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
     && apt-get -y install git iproute2 procps apt-transport-https gnupg2 curl lsb-release \
     #
-    # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
-    && groupadd --gid $USER_GID vscode \
-    && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m vscode \
+    # Create a non-root user to use if preferred - see https://aka.ms/$USERNAME-remote/containers/non-root-user.
+    && groupadd --gid $USER_GID $USERNAME \
+    && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
     # [Optional] Add sudo support for the non-root user
     && apt-get install -y sudo \
-    && echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode\
-    && chmod 0440 /etc/sudoers.d/vscode \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME\
+    && chmod 0440 /etc/sudoers.d/$USERNAME \
     #
     # [Optional] Install Node.js for ASP.NET Core Web Applicationss
     && if [ "$INSTALL_NODE" = "true" ]; then \
@@ -42,13 +43,13 @@ RUN apt-get update \
         # Install nvm and Node
         mkdir ${NVM_DIR} \
         && curl -so- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash 2>&1 \
-        && chown -R vscode:vscode ${NVM_DIR} \
+        && chown -R $USERNAME:$USERNAME ${NVM_DIR} \
         && /bin/bash -c "source $NVM_DIR/nvm.sh \
             && nvm install ${NODE_VERSION} \
             && nvm alias default ${NODE_VERSION}" 2>&1 \
         && INIT_STRING='[ -s "$NVM_DIR/nvm.sh" ] && \\. "$NVM_DIR/nvm.sh"  && [ -s "$NVM_DIR/bash_completion" ] && \\. "$NVM_DIR/bash_completion"' \
-        && echo $INIT_STRING >> /home/vscode/.bashrc \
-        && echo $INIT_STRING >> /home/vscode/.zshrc \
+        && echo $INIT_STRING >> /home/$USERNAME/.bashrc \
+        && echo $INIT_STRING >> /home/$USERNAME/.zshrc \
         && echo $INIT_STRING >> /root/.zshrc \
         #
         # Install yarn
@@ -61,7 +62,9 @@ RUN apt-get update \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && chown -R $USERNAME:$USERNAME $WORK_SPACE_DIR \
+    && chmod -R 775 $WORK_SPACE_DIR
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
