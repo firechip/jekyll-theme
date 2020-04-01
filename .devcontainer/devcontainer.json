@@ -1,0 +1,23 @@
+{
+	"name": "Jekyll Theme",
+	"dockerFile": "Dockerfile",
+	"appPort": [
+		4000
+	],
+	"forwardPorts": [
+		4000
+	],
+	"extensions": [
+		"sissel.shopify-liquid"
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"workspaceFolder": "/src/site",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/src/site,type=bind,consistency=cached"
+  ],
+  "remoteUser": "vscode",
+  //"containerUser": "vscode",
+	//"overrideCommand": false
+}
