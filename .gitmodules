@@ -1,0 +1,3 @@
+[submodule ".devcontainer/pages-gem"]
+	path = .devcontainer/pages-gem
+	url = git@github.com:github/pages-gem.git
