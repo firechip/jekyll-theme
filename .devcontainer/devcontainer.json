@@ -10,8 +10,14 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-  "remoteUser": "vscode",
-  //"containerUser": "vscode",
+	"remoteUser": "node",
+	// "containerUser": "vscode",
 	//"overrideCommand": false,
-	//"postCreateCommand": "yarn install",
+	//"postCreateCommand": "sudo -s -u vscode",
+	"workspaceFolder": "/home/node/jekyll-theme",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/home/node/jekyll-theme,type=bind,consistency=cached"
+	]
 }
+
+// C:\Users\ajsb8\firechip\jekyll-theme
