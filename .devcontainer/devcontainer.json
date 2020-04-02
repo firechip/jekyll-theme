@@ -1,6 +1,6 @@
 {
 	"name": "Jekyll Theme",
-	"dockerFile": "Dockerfile",
+  "dockerFile": "Dockerfile",
 	"appPort": [
 		4000
 	],
@@ -10,14 +10,10 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-	"remoteUser": "node",
+	"remoteUser": "vscode",
 	// "containerUser": "vscode",
 	//"overrideCommand": false,
 	//"postCreateCommand": "sudo -s -u vscode",
-	"workspaceFolder": "/home/node/jekyll-theme",
-	"mounts": [
-		"source=${localWorkspaceFolder},target=/home/node/jekyll-theme,type=bind,consistency=cached"
-	]
 }
 
 // C:\Users\ajsb8\firechip\jekyll-theme
