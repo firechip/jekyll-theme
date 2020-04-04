@@ -4,7 +4,7 @@ set -e
 
 script/build
 
-if test -e "./_site/index.html";then
+if test -e "./_site/index.html"; then
   echo "It builds!"
   rm -Rf _site
 else
@@ -12,4 +12,4 @@ else
   exit 1
 fi
 
-gem build minima.gemspec
+gem build firechip.gemspec
