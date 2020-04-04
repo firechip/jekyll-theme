@@ -1,8 +1,0 @@
-#!/bin/sh
-
- # CMD
-docker run --rm -p 4000:4000 -v  %cd%:/src/site firechip/pages-gem
-# PowerShell
-docker run --rm -p 4000:4000 -v  ${PWD}:/src/site firechip/pages-gem
-# Bash
-docker run --rm -p 4000:4000 -v  $(pwd):/src/site firechip/pages-gem
