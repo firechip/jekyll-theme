@@ -11,15 +11,5 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-	"remoteUser": "vscode",
-	// "containerUser": "vscode",
-	// "runArgs": ["-u", "vscode"]
-	/*
-    "runArgs": [
-        "-v",
-        "${env:SSH_AUTH_SOCK}:/tmp/ssh-agent.socket",
-        "-e",
-        "SSH_AUTH_SOCK=/tmp/ssh-agent.socket"
-	]
-	*/
+	"remoteUser": "vscode"
 }
