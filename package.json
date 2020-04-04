@@ -1,0 +1,35 @@
+{
+  "name": "jekyll-theme",
+  "version": "1.0.0",
+  "description": "Jekyll environment in sync with GitHub Pages",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "test": "script/cibuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firechip/jekyll-theme.git"
+  },
+  "keywords": [
+    "jekyll",
+    "theme",
+    "protocol",
+    "design",
+    "system"
+  ],
+  "author": "Alexander Salas Bastidas (ajsb85@firechip.dev)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/firechip/jekyll-theme/issues"
+  },
+  "homepage": "https://github.com/firechip/jekyll-theme#readme",
+  "dependencies": {
+    "@mozilla-protocol/assets": "^3.0.1",
+    "@mozilla-protocol/core": "^11.0.1",
+    "@mozilla-protocol/tokens": "^5.0.3"
+  },
+  "devDependencies": {
+    "@primer/sync": "git+https://github.com/ajsb85/sync.git"
+  }
+}

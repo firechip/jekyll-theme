@@ -11,5 +11,6 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"postCreateCommand": "npm install"
 }
