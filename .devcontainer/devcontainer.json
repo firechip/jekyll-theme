@@ -1,16 +1,19 @@
 {
-	"name": "Jekyll Theme",
+  "name": "Firechip Jekyll Theme",
   "dockerFile": "Dockerfile",
-	"appPort": [
-		4000
-	],
-	"extensions": [
-		"sissel.shopify-liquid",
-		"mutantdino.resourcemonitor"
-	],
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
-	},
-	"remoteUser": "vscode",
-	"postCreateCommand": "npm install"
+  "appPort": [
+    4000
+  ],
+  "extensions": [
+    "sissel.shopify-liquid",
+    "mutantdino.resourcemonitor",
+    "editorconfig.editorconfig",
+    "pflannery.vscode-versionlens",
+    "redhat.vscode-yaml"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "npm install"
 }
