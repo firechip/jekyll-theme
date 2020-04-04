@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/firechip/jekyll-theme/issues"
   },
-  "homepage": "https://github.com/firechip/jekyll-theme#readme",
+  "homepage": "https://firechip.github.io/jekyll-theme/",
   "dependencies": {
     "@mozilla-protocol/assets": "^3.0.1",
     "@mozilla-protocol/core": "^11.0.1",

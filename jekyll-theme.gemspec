@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ajsb85@firechip.dev"]
 
   spec.summary       = "Jekyll environment in sync with GitHub Pages."
-  spec.homepage      = "https://github.com/firechip/jekyll-theme"
+  spec.homepage      = "https://firechip.github.io/jekyll-theme/"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
