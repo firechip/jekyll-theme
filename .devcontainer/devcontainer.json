@@ -5,15 +5,21 @@
 		4000
 	],
 	"extensions": [
-		"sissel.shopify-liquid"
+		"sissel.shopify-liquid",
+		"mutantdino.resourcemonitor"
 	],
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
 	"remoteUser": "vscode",
 	// "containerUser": "vscode",
-	//"overrideCommand": false,
-	//"postCreateCommand": "sudo -s -u vscode",
+	// "runArgs": ["-u", "vscode"]
+	/*
+    "runArgs": [
+        "-v",
+        "${env:SSH_AUTH_SOCK}:/tmp/ssh-agent.socket",
+        "-e",
+        "SSH_AUTH_SOCK=/tmp/ssh-agent.socket"
+	]
+	*/
 }
-
-// C:\Users\ajsb8\firechip\jekyll-theme
