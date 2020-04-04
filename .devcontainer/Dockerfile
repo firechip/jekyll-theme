@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------------------------------------
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
+# Copyright (c) Firechip SL. All rights reserved.
+# Licensed under the MIT License. See https://git.io/Jvbds for license information.
 #-------------------------------------------------------------------------------------------------------------
 
 ARG RUBY_VERSION=2.5.3
