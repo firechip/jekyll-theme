@@ -2,4 +2,4 @@
 
 set -e
 
-npx primer-sync -p "@mozilla{,-*}"
+npx protocol-sync -p "@mozilla{,-*}"
