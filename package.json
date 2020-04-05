@@ -30,6 +30,7 @@
     "@mozilla-protocol/tokens": "^5.0.3"
   },
   "devDependencies": {
-    "@ajsb85/protocol-sync": "^1.0.1"
+    "@ajsb85/protocol-sync": "^1.0.1",
+    "browser-sync": "^2.26.7"
   }
 }
