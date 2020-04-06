@@ -75,6 +75,8 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
     
+WORKDIR /workspaces/jekyll-theme
+
 RUN git submodule update --init --recursive
 
 COPY pages-gem/.git /src/gh/pages-gem/.git
