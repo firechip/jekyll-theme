@@ -15,5 +15,6 @@
     "terminal.integrated.shell.linux": "/bin/bash"
   },
   "remoteUser": "vscode",
+  "initializeCommand": "git submodule update --init --recursive"
   // "postCreateCommand": "npm install"
 }
