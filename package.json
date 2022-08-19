@@ -31,6 +31,6 @@
   },
   "devDependencies": {
     "@ajsb85/protocol-sync": "^1.0.1",
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.27.10"
   }
 }
